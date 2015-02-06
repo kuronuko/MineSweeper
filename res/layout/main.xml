@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300sp"
+    android:layout_height="300sp"
+    android:padding="10sp"
+    android:background="@drawable/masu"
+    >
+    
+    <ImageButton
+	    android:id="@+id/left_top"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/left"
+	    android:layout_alignTop="@+id/top"
+	    android:background="@drawable/one"
+	    android:onClick="buttonMethod1" />
+	
+	<ImageButton
+	    android:id="@+id/seq1_2"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_above="@+id/center"
+	    android:layout_alignRight="@+id/left_top"
+	    android:background="@drawable/one"
+	    android:onClick="buttonMethod1"
+	    android:padding="10sp" />
+	
+	<ImageButton
+	    android:id="@+id/left"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignTop="@+id/seq2_3"
+	    android:background="@drawable/zero"
+	    android:onClick="buttonMethod0" />
+	
+	<ImageButton
+	    android:id="@+id/seq1_4"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignRight="@+id/left"
+	    android:layout_below="@+id/center"
+	    android:background="@drawable/zero"
+	    android:onClick="buttonMethod0"
+	    android:padding="10sp" />
+	
+	<ImageButton
+	    android:id="@+id/left_bottom"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/seq1_4"
+	    android:layout_alignTop="@+id/seq2_5"
+	    android:background="@drawable/zero"
+	    android:onClick="buttonMethod0" />
+
+	<ImageButton
+	    android:id="@+id/seq2_1"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignTop="@+id/top"
+	    android:layout_toLeftOf="@+id/center"
+	    android:background="@drawable/batu"
+	    android:onClick="buttonMethodBatu" />
+	
+	<ImageButton
+	    android:id="@+id/seq2_2"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_above="@+id/center"
+	    android:layout_toLeftOf="@+id/center"
+	    android:background="@drawable/three"
+	    android:onClick="buttonMethod3"
+	    android:padding="10sp" />
+	
+	<ImageButton
+	    android:id="@+id/seq2_3"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/seq2_2"
+	    android:layout_alignTop="@+id/seq4_3"
+	    android:background="@drawable/one"
+	    android:onClick="buttonMethod1" />
+	
+	<ImageButton
+	    android:id="@+id/seq2_4"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_below="@+id/center"
+	    android:layout_toLeftOf="@+id/center"
+	    android:background="@drawable/one"
+	    android:onClick="buttonMethod1"
+	    android:padding="10sp" />
+
+	<ImageButton
+	    android:id="@+id/seq2_5"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignTop="@+id/bottom"
+	    android:layout_toLeftOf="@+id/center"
+	    android:background="@drawable/zero"
+	    android:onClick="buttonMethod0" />
+	
+	    <ImageButton
+	    android:id="@+id/top"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/center"
+	    android:layout_alignParentTop="true"
+	    android:background="@drawable/batu"
+	    android:onClick="buttonMethodBatu" />
+    
+    <ImageButton
+	    android:id="@+id/seq3_2"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_above="@+id/center"
+	    android:layout_centerHorizontal="true"
+	    android:background="@drawable/three"
+	    android:onClick="buttonMethod3"
+	    android:padding="10sp" />
+    
+	<ImageButton
+	    android:id="@+id/center"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_margin="18sp"
+	    android:layout_centerInParent="true"
+	    android:onClick="buttonMethodBatu"
+	    android:background="@drawable/batu" />
+	
+	<ImageButton
+	    android:id="@+id/seq3_4"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/bottom"
+	    android:layout_below="@+id/center"
+	    android:background="@drawable/two"
+	    android:onClick="buttonMethod2"
+	    android:padding="10sp" />
+	
+	<ImageButton
+	    android:id="@+id/bottom"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/seq3_2"
+	    android:layout_below="@+id/seq3_4"
+	    android:layout_marginTop="15dp"
+	    android:background="@drawable/one"
+	    android:onClick="buttonMethod1" />
+	
+	<ImageButton
+	    android:id="@+id/seq4_1"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignTop="@+id/top"
+	    android:layout_toRightOf="@+id/center"
+	    android:background="@drawable/two"
+	    android:onClick="buttonMethod2" />
+	
+	<ImageButton
+	    android:id="@+id/seq4_2"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_above="@+id/center"
+	    android:layout_toRightOf="@+id/center"
+	    android:background="@drawable/three"
+	    android:onClick="buttonMethod3"
+	    android:padding="10sp" />
+	
+	<ImageButton
+	    android:id="@+id/seq4_3"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/seq4_2"
+	    android:layout_alignTop="@+id/right"
+	    android:background="@drawable/three"
+	    android:onClick="buttonMethod3" />
+	
+	<ImageButton
+	    android:id="@+id/seq4_4"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/seq4_3"
+	    android:layout_below="@+id/center"
+	    android:background="@drawable/batu"
+	    android:onClick="buttonMethodBatu"
+	    android:padding="10sp" />
+
+	<ImageButton
+	    android:id="@+id/seq4_5"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/seq4_3"
+	    android:layout_alignTop="@+id/bottom"
+	    android:background="@drawable/one"
+	    android:onClick="buttonMethod1" />
+	
+	<ImageButton
+	    android:id="@+id/right_top"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/right"
+	    android:layout_alignTop="@+id/top"
+	    android:background="@drawable/one"
+	    android:onClick="buttonMethod1" />
+	
+	<ImageButton
+	    android:id="@+id/seq5_2"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_above="@+id/center"
+	    android:layout_alignLeft="@+id/right"
+	    android:background="@drawable/batu"
+	    android:onClick="buttonMethodBatu"
+	    android:padding="10sp" />
+	
+	<ImageButton
+	    android:id="@+id/right"
+	    android:layout_width="45sp"
+	    android:layout_height="40sp"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:background="@drawable/two"
+	    android:onClick="buttonMethod2" />
+
+	<ImageButton
+	    android:id="@+id/seq5_4"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/right"
+	    android:layout_below="@+id/center"
+	    android:background="@drawable/one"
+	    android:onClick="buttonMethod1"
+	    android:padding="10sp" />
+	
+	<ImageButton
+	    android:id="@+id/right_bottom"
+	    android:layout_width="40sp"
+	    android:layout_height="40sp"
+	    android:layout_alignLeft="@+id/right"
+	    android:layout_alignTop="@+id/bottom"
+	    android:background="@drawable/one"
+	    android:onClick="buttonMethod1" />
+
+</RelativeLayout>

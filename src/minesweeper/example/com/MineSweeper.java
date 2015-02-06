@@ -3,6 +3,7 @@ package minesweeper.example.com;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,10 +22,12 @@ public class MineSweeper extends Activity {
 	//メニューの項目
 	public static final int MENU_SELECT_A = 0;
 	public static final int MENU_SELECT_B = 1;
+	public static final int MENU_SELECT_C = 2;
 	
 	public boolean onCreateOptionsMenu(Menu menu){
 	    menu.add(0, MENU_SELECT_A, 0, "オープンモード");
 	    menu.add(0, MENU_SELECT_B, 0, "地雷チェックモード");
+	    menu.add(0, MENU_SELECT_C, 0, "7 × 7モード");
 	    return true;
 	}
 	
@@ -40,6 +43,10 @@ public class MineSweeper extends Activity {
 		    	Toast.makeText(this, "地雷チェックモード", Toast.LENGTH_SHORT).show();
 		    	modeflag = false; //地雷チェックモード
 		        return false;
+		        
+		    case MENU_SELECT_C:
+		    	Intent result_act = new Intent(MineSweeper.this, MineSweeper7_7.class);
+				startActivity(result_act);
 		    }
 		    return false;
 		}
@@ -92,7 +99,38 @@ public void buttonMethod0(View Button){
 					pushnum = i;
 				}
 			}
-		
+			
+			if (button_flag[1]==0 || button_flag[6]==0 || button_flag[7]==0 || button_flag[8]==0 || button_flag[13]==0) {
+				rectButtons[1].setBackgroundResource(R.drawable.one);
+				rectButtons[2].setBackgroundResource(R.drawable.zero);
+				rectButtons[3].setBackgroundResource(R.drawable.zero);
+				rectButtons[4].setBackgroundResource(R.drawable.zero);
+				rectButtons[6].setBackgroundResource(R.drawable.three);
+				rectButtons[7].setBackgroundResource(R.drawable.one);
+				rectButtons[8].setBackgroundResource(R.drawable.one);
+				rectButtons[9].setBackgroundResource(R.drawable.zero);
+				rectButtons[13].setBackgroundResource(R.drawable.two);
+				rectButtons[14].setBackgroundResource(R.drawable.one);
+				button_flag[1] = 0;
+				button_flag[2] = 0;
+				button_flag[3] = 0;
+				button_flag[4] = 0;
+				button_flag[6] = 0;
+				button_flag[7] = 0;
+				button_flag[8] = 0;
+				button_flag[9] = 0;
+				button_flag[13] = 0;
+				button_flag[14] = 0;
+				
+				//初期化し、再カウント
+				pushcnt = 0;
+				for(int i=0; i<25; i++){
+						pushnum = i;
+						if (button_flag[pushnum]==0) {
+							pushcnt++;
+						}
+				}
+			} else {
 				rectButtons[1].setBackgroundResource(R.drawable.one);
 				rectButtons[2].setBackgroundResource(R.drawable.zero);
 				rectButtons[3].setBackgroundResource(R.drawable.zero);
@@ -114,6 +152,7 @@ public void buttonMethod0(View Button){
 				button_flag[13] = 0;
 				button_flag[14] = 0;
 				pushcnt = pushcnt + 10;
+			}
 		
 		hitlist();		
 		
@@ -214,7 +253,6 @@ public void buttonMethod0(View Button){
 		
 			if (button_flag[pushnum] != 0) {
 				rectButtons[pushnum].setBackgroundResource(R.drawable.flg);
-//				senkou = false ;
 			}
 		}
 	}
@@ -276,7 +314,6 @@ public void buttonMethod0(View Button){
 				rectButtons[pushnum].setBackgroundResource(R.drawable.batu);
 				checkflag = false ;
 				button_flag[pushnum] = 0;
-				pushcnt++;
 		}
 			
 			hitlist();
@@ -319,7 +356,7 @@ public void buttonMethod0(View Button){
 		//ゲームクリア処理
 		if(pushcnt>=20){
 			pushcnt = 0;
-			Toast.makeText(this, "ゲームクリア！", Toast.LENGTH_SHORT).show();
+			Toast.makeText(this, "ゲームクリア！", Toast.LENGTH_LONG).show();
 			alert();
 		}		
 	}

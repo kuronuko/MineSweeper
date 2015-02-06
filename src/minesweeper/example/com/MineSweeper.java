@@ -93,9 +93,27 @@ public void buttonMethod0(View Button){
 				}
 			}
 		
-				rectButtons[pushnum].setBackgroundResource(R.drawable.zero);
-				button_flag[pushnum] = 0;
-				pushcnt++;
+				rectButtons[1].setBackgroundResource(R.drawable.one);
+				rectButtons[2].setBackgroundResource(R.drawable.zero);
+				rectButtons[3].setBackgroundResource(R.drawable.zero);
+				rectButtons[4].setBackgroundResource(R.drawable.zero);
+				rectButtons[6].setBackgroundResource(R.drawable.three);
+				rectButtons[7].setBackgroundResource(R.drawable.one);
+				rectButtons[8].setBackgroundResource(R.drawable.one);
+				rectButtons[9].setBackgroundResource(R.drawable.zero);
+				rectButtons[13].setBackgroundResource(R.drawable.two);
+				rectButtons[14].setBackgroundResource(R.drawable.one);
+				button_flag[1] = 0;
+				button_flag[2] = 0;
+				button_flag[3] = 0;
+				button_flag[4] = 0;
+				button_flag[6] = 0;
+				button_flag[7] = 0;
+				button_flag[8] = 0;
+				button_flag[9] = 0;
+				button_flag[13] = 0;
+				button_flag[14] = 0;
+				pushcnt = pushcnt + 10;
 		
 		hitlist();		
 		
@@ -276,7 +294,6 @@ public void buttonMethod0(View Button){
 			}
 		
 				rectButtons[pushnum].setBackgroundResource(R.drawable.flg);
-//				checkflag = false ;
 		}
 	}
 	

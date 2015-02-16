@@ -516,7 +516,7 @@ public class MineSweeper7_7 extends Activity {
 			alert();
 		}
 		
-		//ゲームクリア処理
+		//ゲームのクリア処理
 		if(pushcnt>=40){
 			pushcnt = 0;
 			Toast.makeText(this, "ゲームクリア！", Toast.LENGTH_LONG).show();
